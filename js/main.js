@@ -82,7 +82,7 @@ $(document).ready(function() {
     
     let image_test = $("#teste01");
 
-    let image_test_input = '<img src="' + portfolio[1].images[1] + '" alt="" />'
+    let image_test_input = '<img src="' + portfolio[0].images[1] + '" alt="" />'
     $(image_test_input).appendTo(image_test);
     console.log(image_test_input);
 }); 
