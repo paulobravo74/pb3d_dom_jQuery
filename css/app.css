@@ -1,8 +1,7 @@
 .bg_red {
     background-color: red;
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
+       
+    
 }
 
 
@@ -12,6 +11,11 @@
 
 .bg_blue {
     background-color: blue;
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    object-fit:fill;
+}
+
+
+.bg_yellow {
+    background-color: yellow;
 }
