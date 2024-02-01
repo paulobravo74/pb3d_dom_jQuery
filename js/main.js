@@ -85,4 +85,5 @@ $(document).ready(function() {
     let image_test_input = '<img src="' + portfolio[1].images[1] + '" alt="" />'
     $(image_test_input).appendTo(image_test);
     console.log(image_test_input);
+    console.log(portfolio[1].images[1])
 }); 
