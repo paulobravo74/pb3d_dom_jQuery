@@ -1,0 +1,17 @@
+.bg_red {
+    background-color: red;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+
+.bg_green {
+    background-color: green;
+}
+
+.bg_blue {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
