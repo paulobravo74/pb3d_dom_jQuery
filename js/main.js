@@ -15,7 +15,7 @@ $(document).ready(function() {
             architect: "RA Architecture",
             local: "Azeitão - Portugal",
             software: "3D Studio Max - Corona - Photoshop",
-            images: ["img/ra_az/ra_az_01.jpg", "img/RA_Az/RA_Az_02.jpg", "../img/RA_Az/RA_Az_03.jpg", "../img/RA_Az/RA_Az_04.jpg", "../img/RA_Az/RA_Az_05.jpg", "../img/RA_Az/RA_Az_06.jpg"]
+            images: ["img/ra_az/ra_az_01.jpg", "img/ra_az/ra_az_02.jpg", "../img/RA_Az/RA_Az_03.jpg", "../img/RA_Az/RA_Az_04.jpg", "../img/RA_Az/RA_Az_05.jpg", "../img/RA_Az/RA_Az_06.jpg"]
         },
         {
             id: 2,
@@ -82,7 +82,7 @@ $(document).ready(function() {
     
     let image_test = $("#teste01");
 
-    let image_test_input = '<img src="' + portfolio[0].images[1] + '" alt="" />'
+    let image_test_input = '<img src="' + portfolio[1].images[1] + '" alt="" />'
     $(image_test_input).appendTo(image_test);
     console.log(image_test_input);
 }); 
