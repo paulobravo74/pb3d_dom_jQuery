@@ -56,7 +56,7 @@ $(document).ready(function() {
     
     let album_slider_random_array = [];
     let album_slider_image_random_array = [];
-    let number_Of_Slides = portfolio.length;
+    let number_Of_Slides = 4;
     
     
     
@@ -129,15 +129,42 @@ $(document).ready(function() {
         $(slider_arch_input).appendTo(slider_Text);
         
 
-
-
         if (slider_img_Select < album_slider_random_array.length - 1) {
             slider_img_Select++
         } else {
             slider_img_Select = 0
         }
+        //console.log(slider_img_Select);
 
-        console.log(slider_img_Select);
+
+        
+        // -------------- Slider Indicator ---------------------
+        
+        let slider_Indicator = $("#slider_indicator_ID");
+        
+        $(slider_Indicator).empty();
+                
+        
+        for (let i = 0; i < album_slider_random_array.length; i++) {
+            
+            //let slider_Indicator_in = document.createElement("div");
+
+            if (slider_img_Select === i) {
+                let slider_Indicator_in = '<div class="slider_indicator_in_active"></div>';    
+                $(slider_Indicator_in).appendTo(slider_Indicator);
+            } else {
+                let slider_Indicator_in = '<div class="slider_indicator_in"></div>';
+                $(slider_Indicator_in).appendTo(slider_Indicator);
+            }
+            
+            
+        }
+
+        
+        
+        //slider_Images.append(slider_Indicator);
+
+
 
 
         setTimeout(Slider_input_Img, 3000);
