@@ -62,12 +62,29 @@ $(document).ready(function() {
     
     // --------- Selection albuns ---------------
     for (let i = 0; i < number_Of_Slides; i++) {
-        
+
+                
         const album_slider_random = Math.floor(Math.random() * portfolio.length);
+
+        let album_slider_random_equal = false;
+
+        album_slider_random_array.forEach((x) => {
+            if (x === album_slider_random) {
+                album_slider_random_equal = true;
+                console.log(album_slider_random_equal);
+                
+            }
+        })
+
+        if (album_slider_random_equal === false) {
+
+            album_slider_random_array.push(album_slider_random);
+            album_slider_image_random_array.push(Math.floor(Math.random() * portfolio[album_slider_random_array[i]].images.length))
         
-        album_slider_random_array.push(album_slider_random);
+        } else {
+            i--
+        }
         
-        album_slider_image_random_array.push(Math.floor(Math.random() * portfolio[album_slider_random_array[i]].images.length))
         
         console.log("album- " + album_slider_random_array);
         console.log("imagem- " + album_slider_image_random_array);
@@ -76,32 +93,9 @@ $(document).ready(function() {
     
 
 
-    let album_repeat = album_slider_random_array;
-    let repeat = false
-
-    for (let i = 0; i < album_repeat.length; i++) {
-
-        let count_repeat = 0;
-
-        console.log(album_repeat[i]);
+    
 
 
-        for (let j = 0; j < album_slider_random_array.length; j++) {
-            
-            console.log(album_slider_random_array[j]);
-            
-            if (album_repeat[i] === album_slider_random_array[j]) {
-                count_repeat++;
-                //console.log("Repetition - " + count_repeat);
-            }
-            
-        }
-        
-        
-        count_repeat > 1 ? repeat=true : repeat=false;
-        console.log(repeat); 
-            
-    }
 
 
     let slider_img_Select = 0;
