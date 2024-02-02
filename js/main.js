@@ -53,21 +53,18 @@ $(document).ready(function() {
     //-------------------- Slides -----------------------//
     //---------------------------------------------------//
 
-    
     let album_slider_random_array = [];
     let album_slider_image_random_array = [];
     let number_Of_Slides = 4;
-    
-    
-    
-    // --------- Selection albuns ---------------
+  
+    // --------- Selection random albuns ---------------
     for (let i = 0; i < number_Of_Slides; i++) {
-
-                
+        
         const album_slider_random = Math.floor(Math.random() * portfolio.length);
 
         let album_slider_random_equal = false;
 
+        // ---------- avoid albuns repetition -----------
         album_slider_random_array.forEach((x) => {
             if (x === album_slider_random) {
                 album_slider_random_equal = true;
@@ -91,15 +88,8 @@ $(document).ready(function() {
         
     }
     
-
-
-    
-
-
-
-
+    // ---------------- Viewer ------------------
     let slider_img_Select = 0;
-
     
     let Slider_input_Img = function() {
         
@@ -154,17 +144,139 @@ $(document).ready(function() {
             
         }
 
-        
-        
-        //slider_Images.append(slider_Indicator);
-
-
-
-
         setTimeout(Slider_input_Img, 3000);
     }
 
     Slider_input_Img();
+
+
+
+    //--------------------------------------------------------------------------//
+    //--------------------------- Portfolio Function ---------------------------//
+    //--------------------------------------------------------------------------// 
+    
+    for (let i = 0; i < portfolio.length; i++) {
+        
+    
+    
+    // Create albuns
+    
+
+        let albunsID = $("#albunsID");
+        
+        let album = '<div id="albumID_' + i + '" class="album"></div>'
+        $(album).appendTo(albunsID);
+        console.log(album);
+
+        /*   
+        let album = document.createElement("div");
+        let albumID = i;
+        album.id = "albumID_" + albumID;
+        album.className = "album";
+        albunsID.append(album);
+        console.log(album.id);
+        
+        
+        let album_image = document.createElement("img");
+        album_image.className = "imgAlbum";
+        
+        let j = 0;
+        i === 0 ? j = 1 : j = j;
+        
+        album_image.src = portfolio[i].images[j];
+        album.append(album_image);
+        
+        let album_arch = document.createElement("p");
+        album_arch.className = "text-center"
+        album_arch.innerHTML = portfolio[i].architect;
+        album.append(album_arch);
+        
+        let album_local = document.createElement("p");
+        album_local.className = "text-center";
+        album_local.innerHTML = portfolio[i].local;
+        album.append(album_local);
+        
+
+
+        // Mouse over event
+        album.addEventListener("mouseover", func, false);
+        function func() {
+            album.setAttribute("class", "albumMouseOver");
+        }
+
+        album.addEventListener("mouseout", func01, false);
+        function func01() {
+            album.setAttribute("class", "album");
+
+        }
+
+       
+        
+        
+        function showImages(albumID) {
+
+            // Obter referências aos elementos do DOM
+            var modal = document.getElementById("myModal");
+            var btnOpenModal = document.getElementById("openModal");
+            var spanCloseModal = document.getElementsByClassName("close")[0];
+            let modal_content = document.getElementById("modal_content_ID");
+
+            
+            modal_content.innerHTML = "";
+            
+            // Adicionar eventos aos elementos
+                modal.style.display = "flex";
+                
+
+                let modal_arch = document.createElement("h1");
+                modal_arch.innerHTML = portfolio[albumID].architect;
+                modal_arch.className = "text-center";
+                modal_content.append(modal_arch);
+
+                let modal_local = document.createElement("p");
+                modal_local.innerHTML = portfolio[albumID].local;
+                modal_local.className = "text-center";
+                modal_content.append(modal_local);
+                
+                for (i = 0; i < portfolio[albumID].images.length; i++) {
+                    
+                    let modal_Images = document.createElement("img"); 
+                    modal_Images.src = portfolio[albumID].images[i];
+                    modal_Images.className = "modal_images";
+                    modal_content.append(modal_Images);
+                }
+
+                let modal_close = document.createElement("span");
+                modal_close.id = "modal_close_ID"
+                modal_close.className = "close";
+                modal_close.innerHTML = "Close Window";
+                modal_content.append(modal_close);
+            
+                
+                
+                let spanCloseModal_ID = document.getElementById("modal_close_ID");
+
+                spanCloseModal_ID.onclick = function() {
+                    modal.style.display = "none";
+                    }
+        
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            
+            
+            console.log("testando");
+            
+            console.log("album-" + albumID);
+        }
+        
+        
+        album.addEventListener("click", showImages.bind(null, albumID), false);
+*/
+    } 
+
 
 
 /*
