@@ -68,7 +68,7 @@ $(document).ready(function() {
         album_slider_random_array.forEach((x) => {
             if (x === album_slider_random) {
                 album_slider_random_equal = true;
-                console.log(album_slider_random_equal);
+                //console.log(album_slider_random_equal);
                 
             }
         })
@@ -83,15 +83,15 @@ $(document).ready(function() {
         }
         
         
-        console.log("album- " + album_slider_random_array);
-        console.log("imagem- " + album_slider_image_random_array);
+        //console.log("album- " + album_slider_random_array);
+        //console.log("imagem- " + album_slider_image_random_array);
         
     }
     
     // ---------------- Viewer ------------------
     let slider_img_Select = 0;
     
-    let Slider_input_Img = function() {
+    function Slider_input_Img() {
         
         let slider_link_arch = portfolio[album_slider_random_array[slider_img_Select]].architect;
         let slider_link_local = portfolio[album_slider_random_array[slider_img_Select]].local;
@@ -156,46 +156,36 @@ $(document).ready(function() {
     //--------------------------------------------------------------------------// 
     
     for (let i = 0; i < portfolio.length; i++) {
-        
-    
+           
     
     // Create albuns
-    
-
         let albunsID = $("#albunsID");
 
         let j = 0;
-        i === 0 ? j = 1 : j = j;
+        i === 0 ? j = 1 : j;
         
-        let album = '<div class="album"> <img class="imgAlbum" src="' + portfolio[i].images[j] + '" class="album" alt=""></img>' +
-                     '<p class="text-center">' + portfolio[i].architect + ' <br>' + portfolio[i].local + '</p> </div>';
-        $(album).appendTo(albunsID);
-        console.log(album);
-        /*   
-        let album = document.createElement("div");
-        let albumID = i;
-        album.id = "albumID_" + albumID;
-        album.className = "album";
-        albunsID.append(album);
-        console.log(album.id);
-        */        
+        let album = $('<div id="album_' + i + '" class="album"> <img id="image_ID" class="imgAlbum" src="' + portfolio[i].images[j] + '" class="album" alt=""></img>' +
+                     '<p class="text-center">' + portfolio[i].architect + ' <br>' + portfolio[i].local + '</p> </div>');
+
         
+        
+    // Mouse over event
+        album.mouseover(function() {
+            $(this).addClass('albumMouseOver');
+            console.log("over");
+        });
+    
+        album.mouseout(function() {
+            $(this).removeClass('albumMouseOver');
+        });
+    
+        album.appendTo(albunsID);
 
 
+
+        
+        
         /*
-        // Mouse over event
-        album.addEventListener("mouseover", func, false);
-        function func() {
-            album.setAttribute("class", "albumMouseOver");
-        }
-
-        album.addEventListener("mouseout", func01, false);
-        function func01() {
-            album.setAttribute("class", "album");
-
-        }
-
-       
         
         
         function showImages(albumID) {
