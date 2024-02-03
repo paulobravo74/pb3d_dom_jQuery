@@ -163,11 +163,14 @@ $(document).ready(function() {
     
 
         let albunsID = $("#albunsID");
+
+        let j = 0;
+        i === 0 ? j = 1 : j = j;
         
-        let album = '<div id="albumID_' + i + '" class="album"></div>'
+        let album = '<div class="album"> <img class="imgAlbum" src="' + portfolio[i].images[j] + '" class="album" alt=""></img>' +
+                     '<p class="text-center">' + portfolio[i].architect + ' <br>' + portfolio[i].local + '</p> </div>';
         $(album).appendTo(albunsID);
         console.log(album);
-
         /*   
         let album = document.createElement("div");
         let albumID = i;
@@ -175,29 +178,11 @@ $(document).ready(function() {
         album.className = "album";
         albunsID.append(album);
         console.log(album.id);
-        
-        
-        let album_image = document.createElement("img");
-        album_image.className = "imgAlbum";
-        
-        let j = 0;
-        i === 0 ? j = 1 : j = j;
-        
-        album_image.src = portfolio[i].images[j];
-        album.append(album_image);
-        
-        let album_arch = document.createElement("p");
-        album_arch.className = "text-center"
-        album_arch.innerHTML = portfolio[i].architect;
-        album.append(album_arch);
-        
-        let album_local = document.createElement("p");
-        album_local.className = "text-center";
-        album_local.innerHTML = portfolio[i].local;
-        album.append(album_local);
+        */        
         
 
 
+        /*
         // Mouse over event
         album.addEventListener("mouseover", func, false);
         function func() {

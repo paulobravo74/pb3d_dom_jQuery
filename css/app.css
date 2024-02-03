@@ -252,7 +252,8 @@
 .album {
     margin: 30px;
     width: 350px;
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     background-color: rgb(233, 233, 233);
 }
@@ -267,6 +268,11 @@
     cursor: pointer;
 }
 
+.imgAlbum {    
+    background-color: rgb(176, 127, 255);
+    width: 100%;
+}
+
 .albumMouseOnClick {
     margin: 30px;
     width: 350px;
@@ -275,13 +281,6 @@
     background-color: rgb(225, 81, 81);
 }
 
-.imgAlbum {    
-    background-color: rgb(176, 127, 255);
-    width: 350px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;    
-}
 
 .albumScale {
 
