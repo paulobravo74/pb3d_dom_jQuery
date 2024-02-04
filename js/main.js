@@ -167,22 +167,89 @@ $(document).ready(function() {
         let album = $('<div id="album_' + i + '" class="album"> <img id="image_ID" class="imgAlbum" src="' + portfolio[i].images[j] + '" class="album" alt=""></img>' +
                      '<p class="text-center">' + portfolio[i].architect + ' <br>' + portfolio[i].local + '</p> </div>');
 
+        album.appendTo(albunsID);
         
         
     // Mouse over event
         album.mouseover(function() {
             $(this).addClass('albumMouseOver');
-            console.log("over");
         });
     
         album.mouseout(function() {
             $(this).removeClass('albumMouseOver');
         });
+
+        
+        
+
+
+        function showImages() {
+
+            
+            $("#myModal").show();
+                        
+            let modal = $("#myModal");
+
+            
+            let modal_content_ID = $('<div class="modal-content"></div>');
+
+                let modal_span = $('<span class="close">&times;</span>');
+                modal_span.appendTo(modal_content_ID);
+                
+                let modal_text = $('<p class="text-center">' + portfolio[i].architect + '</p><br>' + 
+                '<p class="text-center">' + portfolio[i].local + '</p>');
+                modal_text.appendTo(modal_content_ID);
+                
+                let modal_image = $('<img class="modal_images" src="' + portfolio[i].images[1] + '" alt=""></img>');
+                modal_image.appendTo(modal_content_ID);
+            
+            
+                let modal_close = $('<span id="modal_close_ID" class="close text-center">Close window</span>');
+                modal_close.appendTo(modal_content_ID);
+            
+            
+            modal_content_ID.appendTo(modal);
+            
+            
+            let spanCloseModal_ID = $("#modal_close_ID");
+
+            spanCloseModal_ID.onclick = function() {
+                $('myModal').modal().hide();
+                }
     
-        album.appendTo(albunsID);
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                $("#myModal").removeAttr("style").hide();
+                }
+            }
+            
+            
+            
+            
+            console.log("click - " + portfolio[i].architect + " - " + portfolio[i].local);
+            
+            
+            
 
+            /*
+            
+            let spanCloseModal_ID = $("#modal_close_ID");
 
+                spanCloseModal_ID.onclick = function() {
+                    modal.style.display = "none";
+                    }
+        
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                    
+                    */
+                    
+        }
 
+        album.click(showImages) ;
         
         
         /*
