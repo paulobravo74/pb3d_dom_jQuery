@@ -1,5 +1,7 @@
-$(document).ready(function() {
+import { name_teste, arch_name_test, portfolio_test } from "./app/model/teste.js";
 
+$(document).ready(function() {
+    
 
     let portfolio = [
         {
@@ -150,6 +152,13 @@ $(document).ready(function() {
     Slider_input_Img();
 
 
+    let nameTest = $("#nameTest");
+
+    let nameTest_print = $('<h1 class="text-center">' + portfolio_test[0].architect + ' - ' + portfolio_test[0].local + '</h1>');
+    $(nameTest_print).appendTo(nameTest);
+
+
+
 
     //--------------------------------------------------------------------------//
     //--------------------------- Portfolio Function ---------------------------//
@@ -183,142 +192,50 @@ $(document).ready(function() {
         
 
 
+        // ------------------- Modal ----------------------
         function showImages() {
 
+            $("#myModal").modal('show')
             
-            $("#myModal").show();
-                        
-            let modal = $("#myModal");
-
-            
-            let modal_content_ID = $('<div class="modal-content"></div>');
-
-                let modal_span = $('<span class="close">&times;</span>');
-                modal_span.appendTo(modal_content_ID);
+            let modal_header = $("#modal_header");
+                let modal_header_arch = $('<h4 class="modal-title text-center">' + portfolio[i].architect + '</h4>');
+                let modal_arch_button = $('<button type="button" class="btn-close" data-bs-dismiss="modal"></button>');
+                modal_header_arch.appendTo(modal_header);
+                modal_arch_button.appendTo(modal_header);
                 
-                let modal_text = $('<p class="text-center">' + portfolio[i].architect + '</p><br>' + 
-                '<p class="text-center">' + portfolio[i].local + '</p>');
-                modal_text.appendTo(modal_content_ID);
+                let modal_body = $('#modal_body');
+                let modal_body_local = $('<p class="text-center bg_green ">' + portfolio[i].local + '</p>');
+                modal_body_local.appendTo(modal_body);
                 
-                let modal_image = $('<img class="modal_images" src="' + portfolio[i].images[1] + '" alt=""></img>');
-                modal_image.appendTo(modal_content_ID);
-            
-            
-                let modal_close = $('<span id="modal_close_ID" class="close text-center">Close window</span>');
-                modal_close.appendTo(modal_content_ID);
-            
-            
-            modal_content_ID.appendTo(modal);
-            
-            
-            let spanCloseModal_ID = $("#modal_close_ID");
-
-            spanCloseModal_ID.onclick = function() {
-                $('myModal').modal().hide();
-                }
-    
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                $("#myModal").removeAttr("style").hide();
-                }
-            }
-            
-            
-            
+                let modal_image = $('#modal_image');
+                let modal_image_input = $('<img src="' + portfolio[i].images[1] + '" class="image_modal " alt=""></img>');
+                modal_image_input.appendTo(modal_image);
+                
+                let modal_footer = $('#modal_footer');
+                let modal_footer_button = $('<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>');
+                modal_footer_button.appendTo(modal_footer);    
+                modal_footer_button.on('click', function() {
+                    $("#myModal").modal('hide');
+                  });
+                  
+                  $("#myModal").on('hidden.bs.modal', function() {
+                    modal_header.empty();
+                    modal_body.empty();
+                    modal_image.empty();
+                    modal_footer.empty();
+                  });
             
             console.log("click - " + portfolio[i].architect + " - " + portfolio[i].local);
-            
-            
-            
-
-            /*
-            
-            let spanCloseModal_ID = $("#modal_close_ID");
-
-                spanCloseModal_ID.onclick = function() {
-                    modal.style.display = "none";
-                    }
-        
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    }
-                    
-                    */
-                    
+             
         }
 
-        album.click(showImages) ;
+        album.click(showImages);
         
         
-        /*
-        
-        
-        function showImages(albumID) {
 
-            // Obter referências aos elementos do DOM
-            var modal = document.getElementById("myModal");
-            var btnOpenModal = document.getElementById("openModal");
-            var spanCloseModal = document.getElementsByClassName("close")[0];
-            let modal_content = document.getElementById("modal_content_ID");
+    }
 
-            
-            modal_content.innerHTML = "";
-            
-            // Adicionar eventos aos elementos
-                modal.style.display = "flex";
-                
-
-                let modal_arch = document.createElement("h1");
-                modal_arch.innerHTML = portfolio[albumID].architect;
-                modal_arch.className = "text-center";
-                modal_content.append(modal_arch);
-
-                let modal_local = document.createElement("p");
-                modal_local.innerHTML = portfolio[albumID].local;
-                modal_local.className = "text-center";
-                modal_content.append(modal_local);
-                
-                for (i = 0; i < portfolio[albumID].images.length; i++) {
-                    
-                    let modal_Images = document.createElement("img"); 
-                    modal_Images.src = portfolio[albumID].images[i];
-                    modal_Images.className = "modal_images";
-                    modal_content.append(modal_Images);
-                }
-
-                let modal_close = document.createElement("span");
-                modal_close.id = "modal_close_ID"
-                modal_close.className = "close";
-                modal_close.innerHTML = "Close Window";
-                modal_content.append(modal_close);
-            
-                
-                
-                let spanCloseModal_ID = document.getElementById("modal_close_ID");
-
-                spanCloseModal_ID.onclick = function() {
-                    modal.style.display = "none";
-                    }
-        
-                window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-                }
-            
-            
-            console.log("testando");
-            
-            console.log("album-" + albumID);
-        }
-        
-        
-        album.addEventListener("click", showImages.bind(null, albumID), false);
-*/
-    } 
-
+    
 
 
 /*

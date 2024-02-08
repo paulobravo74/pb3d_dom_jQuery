@@ -1,9 +1,6 @@
 .bg_red {
-    background-color: red;
-       
-    
+    background-color: red; 
 }
-
 
 .bg_green {
     background-color: green;
@@ -11,6 +8,10 @@
 
 .bg_blue {
     background-color: blue;
+}
+
+.bg_black {
+    background-color: black;
 }
 
 @media only screen and (max-width: 480px) {
@@ -58,18 +59,9 @@
     text-align: center;
 }
 
-.backGround-black {
-    background-color: black;
-}
 
-.backGround-red {
-    background-color: red;
-}
 
-.bg_green {
-    background-color: green;
-    padding-bottom: 15px;
-}
+
 
 .slider {
     background-color: grey;
@@ -246,7 +238,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .album {
@@ -287,6 +279,28 @@
     width: 120%;background-color: red;
 }
 
+
+.image_modal_context {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.image_modal {
+    margin: 15px;
+    background-color: rgb(164, 54, 54);
+    display:flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    max-width: 90%;
+    
+    padding: 5px;
+    
+}
+
 .text-center {
     text-align: center;
 }
@@ -318,17 +332,6 @@
 }
 
 
-.modal_images {
-    margin: 15px;
-    background-color: rgb(164, 54, 54);
-    display:flexbox;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    max-width: 90%;
-    
-    padding: 5px;
-}
 
 
 .about {
@@ -386,52 +389,5 @@
     padding-right: 25px;
 }
 
-
-
-.container,
-.container-fluid,
-.container-xxl,
-.container-xl,
-.container-lg,
-.container-md,
-.container-sm {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.footer {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    background-color: #2c3e50;
-    color: #fff;
-  }
-
-
-
-.col-lg-4 {
-flex: 0 0 auto;
-width: 33.33333333%;
-}
-
-.mb-5 {
-margin-bottom: 3rem !important;
-}
-
-.mb-lg-0 {
-    margin-bottom: 0 !important;
-}
-
-.text-uppercase {
-    text-transform: uppercase !important;
-}
-
-.mb-4 {
-margin-bottom: 1.5rem !important;
-}
 
 
