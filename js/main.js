@@ -272,13 +272,16 @@ let createShowreel = function() {
     for (let i = 0; i < showreel_list.length; i++) {
         
         let Showreel = $("#showreel");
+
+        let Showreel_album = $('<div class="showreel_album">')
         
         let Showreel_tittle = $('<h2>' + showreel_list[i].tittle +'</h2>');
-        Showreel_tittle.appendTo(Showreel);
+        Showreel_tittle.appendTo(Showreel_album);
         
         let Showreel_link = $('<iframe width="420" height="315" class="youtube" src="' + showreel_list[i].link + '"></iframe>');
-        Showreel_link.appendTo(Showreel);
+        Showreel_link.appendTo(Showreel_album);
         
+        $(Showreel_album).appendTo(Showreel);       
     }
     
 }

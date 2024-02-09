@@ -232,6 +232,7 @@
 
 .portfolio {
     background-color: rgb(221, 75, 75);
+    padding-bottom: 100px;
 }
 
 .albuns {
@@ -325,6 +326,7 @@
 
 .showreel {
     background-color: rgb(199, 199, 199);
+    padding-bottom: 100px;
 }
 
 .showreel_albuns {
@@ -336,23 +338,25 @@
 }
 
 .showreel_album {
+    background-color: rgb(233, 233, 233);
     text-align: center;
-    margin: 0px;
     display: flex;
     flex-direction: column;
     flex-wrap:wrap;
     justify-content: space-evenly;
     margin: 15px;
+    width: 450px;
+    padding: 15px;
+    border-radius: 15px;
 }
 
 .youtube {
-    margin-bottom: 50px;
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
-    justify-content: space-around;
-    width: 500px;
-    height: 300px;
+    justify-content: center;
+    width: 100%;
+    
 }
 
 
