@@ -270,7 +270,7 @@ let createShowreel = function() {
         let Showreel_tittle = $('<h2>' + showreel_list[i].tittle +'</h2>');
         Showreel_tittle.appendTo(Showreel_album);
         
-        let Showreel_link = $('<iframe width="420" height="315" class="youtube" src="' + showreel_list[i].link + '"></iframe>');
+        let Showreel_link = $('<iframe width="420" height="315" class="youtube" src="' + showreel_list[i].link + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         Showreel_link.appendTo(Showreel_album);
         
         $(Showreel_album).appendTo(Showreel);       
