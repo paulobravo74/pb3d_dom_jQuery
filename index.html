@@ -21,6 +21,9 @@
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/styles.css">
 
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
   <meta name="theme-color" content="#fafafa">
 
 
@@ -46,6 +49,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#showreel_ID">ShowReel</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
             </ul>
@@ -72,7 +76,7 @@
 
   
   <!------------------- Portfolio ------------------------>
-  <div class="portfolio" id="portf_ID">
+  <div class="portfolio" id="portfolio">
     <h1 class="text-center tittles">Portfolio</h1>
     <div id="albunsID" class="albuns"></div>
   </div>
@@ -116,13 +120,25 @@
       <!--<div class="showreel_album bg_red">-->
         <!--<p>Title</p>-->
         <!--<iframe width="420" height="315" class="youtube" src="http://www.youtube.com/embed/SyrTpqoReJQ"></iframe>-->
-      </div>
     </div>
   </div>
 
-  <div id="about">
+  <div class="about" id="about">
     <h1 class="text-center tittles">About</h1>
+    <div id="about_text"></div>
   </div>
+
+  <div id="contact">
+    <h1 class="text-center tittles bg_red">Contact</h1>
+    <div id="contact_context" class="flex-container bg_green">
+      <div id="contact_location" class="contact_ bg_blue"></div>
+      <div id="contact_web" class="contact_"></div>
+      <div id="contact_contact" class="contact_"></div>
+    </div>
+  </div>
+
+
+  
 
 
   <!-- Bootsrap Modal -->
@@ -145,6 +161,8 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+  
 
 
 </body>

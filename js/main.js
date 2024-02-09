@@ -290,6 +290,56 @@ let createShowreel = function() {
     
 
 
+
+    //-----------------------------------------------------------------------//
+    //-------------------------------- About --------------------------------//
+    //-----------------------------------------------------------------------//
+
+    let about_text = $("#about_text");
+
+    let about_text_write = '<p class="about_Text">I fell in love with 3D animations and special effects at a very young age and since 2005, I embarked on this adventure, leaving behind CNC programming in milling machines. Over time, I have perfected my skills in modeling, texturing, lighting, animation, and post-production. I chose to pursue a path of assisting architects and clients, as well as investors who want to showcase their future projects</p>';
+    $(about_text_write).appendTo(about_text);
+
+
+
+    //-------------------------------------------------------------------------//
+    //-------------------------------- Contact --------------------------------//
+    //-------------------------------------------------------------------------//
+
+
+    let contact_context = $("#contact_context");
+
+    //------ Contact Location-------
+    let contact_location = $("#contact_location");
+
+    let contact_location_tittle = $('<h1 class="contact_tittles">Location</h1>');
+    contact_location_tittle.appendTo(contact_location);
+
+    let contact_location_local = $('<div class="contact_local"><p>Portugal</p><p>Seixal</p></div>');
+    contact_location_local.appendTo(contact_location);
+
+
+    //------ Contact Web-------
+    let contact_web = $("#contact_web");
+
+    let contact_web_tittle = $('<h1 class="contact_tittles">Around the Web</h1>');
+    contact_web_tittle.appendTo(contact_web);
+
+    let contact_web_local = $('<p>Linkdin</p>');
+    contact_web_local.appendTo(contact_web);
+
+
+    //------ Contact Contact-------
+    let contact_contact = $("#contact_contact");
+
+    let contact_contact_tittle = $('<h1 class="contact_tittles">Contact</h1>');
+    contact_contact_tittle.appendTo(contact_contact);
+
+    let contact_contact_local = $('<div class="contact_contact"><p>pb.3d@gmail.com</p><p>933409201</p></div>');
+    contact_contact_local.appendTo(contact_contact);
+
+
+
 /*
     let text_array = [2, 3, 5];
 

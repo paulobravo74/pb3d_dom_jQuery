@@ -32,6 +32,7 @@
 .tittles {
     padding-top: 50px;
     padding-bottom: 30px;
+    font-size: 85px;
 }
 
 .testemenu {
@@ -368,12 +369,57 @@
 
 .about_Text {
     margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-bottom: 100px;
     font-size: larger;
     text-align: justify;
 }
+
+.contact_context_ {
+    margin-top: 50px;
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact_ {
+   text-align: center;
+   width: 100%;
+   padding-bottom: 25px;
+}
+
+.contact_tittles {
+    font-size: 40px;
+}
+
+.contact_local {
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.contact_contact {
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+    .flex-container {
+        background-color: yellow;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+  }
 
 .local_row {
     display: flex;
