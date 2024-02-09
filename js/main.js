@@ -153,10 +153,6 @@ $(document).ready(function() {
 
 
 
-
-
-
-
     //--------------------------------------------------------------------------//
     //--------------------------- Portfolio Function ---------------------------//
     //--------------------------------------------------------------------------// 
@@ -236,8 +232,6 @@ $(document).ready(function() {
         }
 
         album.click(showImages);
-        
-        
 
     }
 
@@ -341,47 +335,6 @@ let createShowreel = function() {
 
     let contact_contact_local = $('<div class="contact_contact"><p>pb.3d@gmail.com</p><p>933409201</p></div>');
     contact_contact_local.appendTo(contact_contact);
-
-
-
-/*
-    let text_array = [2, 3, 5];
-
-
-    let text = $("#teste");
-
-    let text_number = 1;
-
-    text_array.forEach(function(x) {
-
-        let text_print;
-        if (x % 2 !== 0 ) {
-
-            text_print = "<p>The number " + x + " is a odd number.</p>"
-        
-        } else {
-            text_print = "<p>The number " + x + " is an even number.</p>"
-        }
-        
-        $(text_print).appendTo(text);
-    })
-
-    let new_text = document.createElement("h3");
-    new_text.className = "bg_green"
-    new_text.innerHTML = "New Text";
-    $(new_text).appendTo(text);
-
-    
-    let image_test = $("#teste01");
-    
-
-    let image_test_input = '<img src="' + portfolio[1].images[0] + '" alt="" />';
-    $(image_test).className = "image";
-    $(image_test_input).appendTo(image_test);
-    console.log(image_test_input);
-    console.log(portfolio[1].images[0])
-
-*/
 
 
 }); 
