@@ -1,4 +1,4 @@
-import { name_teste, arch_name_test, portfolio_test } from "./app/model/teste.js";
+//import { name_teste, arch_name_test, portfolio_test } from "./app/model/teste.js";
 
 $(document).ready(function() {
     
@@ -9,7 +9,7 @@ $(document).ready(function() {
             architect: "SM Architecture",
             local: "Fernão Ferro - Portugal",
             software: "3D Studio Max - Corona - Photoshop",
-            images: ["./img/SM_FF/01_exterior.jpg", "./img/SM_FF/02_exterior.jpg", "./img/SM_FF/03_exterior.jpg", "./img/SM_FF/04_exterior.jpg", "./img/SM_FF/05_exterior.jpg", "./img/SM_FF/06_exterior.jpg"]
+            images: ["./img/SM_FF/sm_ff_01_exterior.jpg", "./img/SM_FF/sm_ff_02_exterior.jpg", "./img/SM_FF/sm_ff_03_exterior.jpg", "./img/SM_FF/sm_ff_04_exterior.jpg", "./img/SM_FF/sm_ff_05_exterior.jpg", "./img/SM_FF/sm_ff_06_exterior.jpg"]
            
         },
         {
@@ -152,10 +152,7 @@ $(document).ready(function() {
     Slider_input_Img();
 
 
-    let nameTest = $("#nameTest");
 
-    let nameTest_print = $('<h1 class="text-center">' + portfolio_test[0].architect + ' - ' + portfolio_test[0].local + '</h1>');
-    $(nameTest_print).appendTo(nameTest);
 
 
 
@@ -222,6 +219,7 @@ $(document).ready(function() {
                 $(modal_footer).empty();
                 let modal_footer_button = $('<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>');
                 modal_footer_button.appendTo(modal_footer);    
+                
                 modal_footer_button.on('click', function() {
                     $("#myModal").modal('hide');
                   });
@@ -307,8 +305,6 @@ let createShowreel = function() {
     //-------------------------------------------------------------------------//
 
 
-    let contact_context = $("#contact_context");
-
     //------ Contact Location-------
     let contact_location = $("#contact_location");
 
@@ -325,9 +321,17 @@ let createShowreel = function() {
     let contact_web_tittle = $('<h1 class="contact_tittles">Around the Web</h1>');
     contact_web_tittle.appendTo(contact_web);
 
-    let contact_web_local = $('<p>Linkdin</p>');
-    contact_web_local.appendTo(contact_web);
+    let contact_web_icons = $('<div class="icons_">');
+    contact_web_icons.appendTo(contact_web);
 
+    let contact_web_facebook = $('<a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/PBravo.3D" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>');
+    contact_web_facebook.appendTo(contact_web_icons);
+
+    let contact_web_linkedin = $('<a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/PBravo.3D" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>');
+    contact_web_linkedin.appendTo(contact_web_icons);
+
+    let contact_web_instagram = $('<a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/pb_3d.paulo_bravo" target="_blank"><i class="fab fa-fw fa-dribbble"></i></a>');
+    contact_web_instagram.appendTo(contact_web_icons);
 
     //------ Contact Contact-------
     let contact_contact = $("#contact_contact");
