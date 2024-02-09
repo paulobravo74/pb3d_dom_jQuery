@@ -194,24 +194,32 @@ $(document).ready(function() {
 
         // ------------------- Modal ----------------------
         function showImages() {
-
+            
             $("#myModal").modal('show')
             
-            let modal_header = $("#modal_header");
-                let modal_header_arch = $('<h4 class="modal-title text-center">' + portfolio[i].architect + '</h4>');
+            for (let j = 0; j < portfolio[i].images.length; j++) {
+                
+                let modal_header = $("#modal_header");
+                $(modal_header).empty();
+                let modal_header_arch = $('<h4 class="text-center">' + portfolio[i].architect + '</h4>');
                 let modal_arch_button = $('<button type="button" class="btn-close" data-bs-dismiss="modal"></button>');
                 modal_header_arch.appendTo(modal_header);
                 modal_arch_button.appendTo(modal_header);
                 
                 let modal_body = $('#modal_body');
-                let modal_body_local = $('<p class="text-center bg_green ">' + portfolio[i].local + '</p>');
+                $(modal_body).empty();
+                let modal_body_local = $('<h3 class="text-center">' + portfolio[i].local + '</h3>');
                 modal_body_local.appendTo(modal_body);
                 
                 let modal_image = $('#modal_image');
-                let modal_image_input = $('<img src="' + portfolio[i].images[1] + '" class="image_modal " alt=""></img>');
+                //$(modal_image).empty();
+                let modal_image_input = $('<img src="' + portfolio[i].images[j] + '" class="image_modal " alt=""></img>' + '<br>' + '<hr>');
                 modal_image_input.appendTo(modal_image);
                 
+            }
+                               
                 let modal_footer = $('#modal_footer');
+                $(modal_footer).empty();
                 let modal_footer_button = $('<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>');
                 modal_footer_button.appendTo(modal_footer);    
                 modal_footer_button.on('click', function() {
@@ -219,10 +227,10 @@ $(document).ready(function() {
                   });
                   
                   $("#myModal").on('hidden.bs.modal', function() {
-                    modal_header.empty();
-                    modal_body.empty();
-                    modal_image.empty();
-                    modal_footer.empty();
+                    $(modal_header).empty();
+                    $(modal_body).empty();
+                    $(modal_image).empty();
+                    $(modal_footer).empty();
                   });
             
             console.log("click - " + portfolio[i].architect + " - " + portfolio[i].local);
@@ -235,6 +243,47 @@ $(document).ready(function() {
 
     }
 
+    
+
+
+    //--------------------------------------------------------------------------//
+    //-------------------------------- Showreel --------------------------------//
+    //--------------------------------------------------------------------------//
+
+    let showreel_list = [
+        {
+            tittle: "Showreel 2008",
+            link: "http://www.youtube.com/embed/mXvZ_6Mg3wk"
+        },
+        {
+            tittle: "Showreel 2020",
+            link: "http://www.youtube.com/embed/of0XUB_xKwQ"
+        },
+        {
+            tittle: "Showreel 2021",
+            link: "http://www.youtube.com/embed/SyrTpqoReJQ"
+        }
+    ]
+    
+
+let createShowreel = function() {
+
+    
+    for (let i = 0; i < showreel_list.length; i++) {
+        
+        let Showreel = $("#showreel");
+        
+        let Showreel_tittle = $('<h2>' + showreel_list[i].tittle +'</h2>');
+        Showreel_tittle.appendTo(Showreel);
+        
+        let Showreel_link = $('<iframe width="420" height="315" class="youtube" src="' + showreel_list[i].link + '"></iframe>');
+        Showreel_link.appendTo(Showreel);
+        
+    }
+    
+}
+
+    createShowreel();
     
 
 
