@@ -1,5 +1,3 @@
-//import { name_teste, arch_name_test, portfolio_test } from "./app/model/teste.js";
-
 $(document).ready(function() {
     
 
@@ -49,6 +47,9 @@ $(document).ready(function() {
         }
     ];
 
+
+
+    
 
     
     //---------------------------------------------------//
@@ -234,8 +235,7 @@ $(document).ready(function() {
         album.click(showImages);
 
     }
-
-    
+   
 
 
     //--------------------------------------------------------------------------//
@@ -259,8 +259,7 @@ $(document).ready(function() {
     
 
 let createShowreel = function() {
-
-    
+   
     for (let i = 0; i < showreel_list.length; i++) {
         
         let Showreel = $("#showreel");
@@ -270,12 +269,12 @@ let createShowreel = function() {
         let Showreel_tittle = $('<h2>' + showreel_list[i].tittle +'</h2>');
         Showreel_tittle.appendTo(Showreel_album);
         
-        let Showreel_link = $('<iframe width="420" height="315" class="youtube" src="' + showreel_list[i].link + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        let Showreel_link = $('<iframe width="420" height="315" class="youtube" src="' + showreel_list[i].link + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>');
+
         Showreel_link.appendTo(Showreel_album);
         
         $(Showreel_album).appendTo(Showreel);       
     }
-    
 }
 
     createShowreel();
@@ -297,7 +296,6 @@ let createShowreel = function() {
     //-------------------------------------------------------------------------//
     //-------------------------------- Contact --------------------------------//
     //-------------------------------------------------------------------------//
-
 
     //------ Contact Location-------
     let contact_location = $("#contact_location");
@@ -321,11 +319,12 @@ let createShowreel = function() {
     let contact_web_facebook = $('<a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/PBravo.3D" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>');
     contact_web_facebook.appendTo(contact_web_icons);
 
-    let contact_web_linkedin = $('<a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/PBravo.3D" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>');
+    let contact_web_linkedin = $('<a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/paulo-bravo" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>');
     contact_web_linkedin.appendTo(contact_web_icons);
 
     let contact_web_instagram = $('<a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/pb_3d.paulo_bravo" target="_blank"><i class="fab fa-fw fa-dribbble"></i></a>');
     contact_web_instagram.appendTo(contact_web_icons);
+
 
     //------ Contact Contact-------
     let contact_contact = $("#contact_contact");

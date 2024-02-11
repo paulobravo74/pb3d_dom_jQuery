@@ -38,7 +38,7 @@
 </head>
 
 <body id="page-top">
-  <!-- Navigation -->
+  <!-- NavBar -->
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
         <a class="navbar-brand" href="#page-top">PB-3D</a>
@@ -83,7 +83,6 @@
 
 
   <!---------------- Modal ----------------->
-  
   <div class="modal" id="myModal">
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
@@ -105,16 +104,19 @@
   </div>
 
 
+  <!---------------- Showreel ----------------->
   <div class="showreel bg_gradient" id="showreel_ID">
     <h1 class="text-center tittles">ShowReel</h1>
     <div id="showreel" class="showreel_albuns"></div>
   </div>
 
+  <!---------------- About ----------------->
   <div class="about bg_gradient" id="about">
     <h1 class="text-center tittles">About</h1>
     <div id="about_text"></div>
   </div>
 
+  <!---------------- Contact ----------------->
   <div class="bg_gradient" id="contact">
     <h1 class="text-center tittles">Contact</h1>
     <div id="contact_context" class="flex-container">
@@ -138,10 +140,18 @@
   <script src="js/plugins.js"></script>
   <script type="module" src="js/main.js"></script>
 
-  <!-- Bootstrap core JS-->
+
+  <!-- Bootstrap core JS NavBar-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+  <!-- * *                               SB Forms JS                               * *-->
+  <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+  <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
+  
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
